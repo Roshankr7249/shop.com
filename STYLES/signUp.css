@@ -1,0 +1,107 @@
+#parent {
+    margin-left: 13%;
+    margin-right: 10%;
+}
+
+h1 {
+margin-bottom: -4px;
+color: #414467;
+}
+
+
+
+#child1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+
+#child1 input {
+    width: 400px;
+    height: 37px;
+}
+
+#child1 p {
+    margin-bottom: 5px
+}
+
+button {
+    display: block;
+    width: 410px;
+    background-color: #414467;
+    color: white;
+    height: 36px;
+    border-radius: 30px;
+    border: none;
+}
+
+button:hover {
+    background-color: #202340;
+}
+
+p {
+    color: #414467;
+}
+
+h1 {
+    color: #414467;
+}
+
+h3 {
+    color: #414467;
+}
+
+h5 {
+    color: #414467;
+}
+
+a {
+    color: #202340;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3366cc;
+}
+
+#phNumber {
+    width: 400px;
+    height: 37px;
+    /* padding-bottom: 3px;
+    padding-left: 3px; */
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+#referal input {
+    width: 900px;
+    height: 35px;
+}
+
+#referal {
+     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#captchaBox {
+    display: flex;
+    justify-content: space-around;
+     width: 25%;
+    /* height: 100px; */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#captchaBox div img{
+    width: 30%;
+}
+
+#captchaBox div label{
+  font-size: 15px; 
+}
+
+/* MEDIA QUERIES */
+@media only  screen and (max-width: 480px) {
+  #child1 {
+  flex-direction: column;
+  text-align: center;
+  }
+}
