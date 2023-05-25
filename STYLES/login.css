@@ -1,0 +1,90 @@
+#parent {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#parent input {
+    width: 400px;
+    height: 37px;
+}
+
+#child1 p {
+    color: #414467;
+    margin-bottom: 5px;
+}
+
+
+#child1 a {
+    display: block;
+    margin-bottom: 25px;
+    color:  #202340;
+    margin-top: 5px;
+}
+
+#child1 button {
+    display: block;
+    width: 410px;
+    background-color: #414467;
+    color: white;
+    height: 36px;
+    border-radius: 30px;
+    border: none;
+}
+
+#child1 button:hover {
+    background-color: #202340;
+}
+
+#child2 button:hover {
+    background-color: #202340;
+    color: white;
+}
+
+#child2 button {
+    display: block;
+    margin-top: 8px;
+    width: 200px;
+    height: 36px;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid #202340;
+    color: #202340;
+    font-weight: 760;
+}
+
+#child2 p {
+    font-size: 23px;
+    font-weight: 500;
+    padding-top: 48px;
+    margin-bottom: 12px;
+    color: #414467;
+}
+
+span {
+    color: #414467;
+}
+
+#child2 a {
+    color: #202340;
+}
+
+h1 {
+    margin-bottom: -5px;
+    color: #414467;
+} 
+
+#parent a:hover {
+    text-decoration: none;
+    color: #3366cc;
+}
+
+/* MEDIA QUERIES */
+@media only  screen and (max-width: 450px) {
+    #parent {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+  
