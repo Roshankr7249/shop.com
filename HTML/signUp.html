@@ -13,6 +13,7 @@
 
        h1 {
         margin-bottom: -4px;
+        color: #414467;
        }
 
        
@@ -32,11 +33,58 @@
             margin-bottom: 5px
         }
 
-        .descendent2 + div {
-            margin-bottom: 50px;
-            /* padding-bottom: 50px; */
+        button {
+            display: block;
+            width: 410px;
+            background-color: #414467;
+            color: white;
+            height: 36px;
+            border-radius: 30px;
+            border: none;
         }
 
+        button:hover {
+            background-color: #202340;
+        }
+
+        p {
+            color: #414467;
+        }
+
+        h1 {
+            color: #414467;
+        }
+        
+        h3 {
+            color: #414467;
+        }
+
+        h5 {
+            color: #414467;
+        }
+
+        a {
+            color: #202340;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #3366cc;
+        }
+
+        #phNumber {
+            width: 400px;
+            height: 37px;
+        }
+
+        #referal input {
+            width: 900px;
+            height: 35px;
+        }
+
+        #referal {
+             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
 
     </style>
 </head>
@@ -76,12 +124,22 @@
         <h3>Text Message (SMS) Alerts: (Optional)</h3>
         <p>Do you want to sign up for Shopper alerts from SHOP.COM? (Message and data rates may apply.)</p>
         <p>Mobile Phone</p>
-        <input id="" type="number" placeholder="">
-        <div>
+        <input id="phNumber" type="number" placeholder="Please enter your 10 digit phone number (i.e. 999 999 9999)">
+        <div id="referal">
             <p>Were you referred by a friend?</p>
             <p>Enter their email address (Optional)</p>
-            <input type="text">
+            <input id="Optional" type="text">
         </div>
+        <p>Your Shop Consultant is SHOP.COM</p>
+        <h3>Email deals: (Optional)</h3>
+        <p>Do you want to sign up for sweet email offers and discounts from SHOP.COM?</p>
+        <p>Do you want to sign up for sweet email offers and discounts from MarketAmerica.com and its brands?</p>
+        <h5>Also, please confirm you are not a robot:</h5>
+        <!-- Captcha Box -->
+        
+        <!-- end -->
+        <button>Create your new Account</button>
+        <p>By creating an account, you are agreeing to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></p>
     </div>
 </body>
 </html>
