@@ -5,17 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create an Account</title>
+    <style>
+        #parent {
+            margin-left: 13%;
+            margin-right: 10%;
+        }
+
+       h1 {
+        margin-bottom: -4px;
+       }
+
+       
+
+        #child1 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -20px;
+        }
+
+        #child1 input {
+            width: 400px;
+            height: 37px;
+        }
+
+        #child1 p {
+            margin-bottom: 5px
+        }
+
+        .descendent2 + div {
+            margin-bottom: 50px;
+            /* padding-bottom: 50px; */
+        }
+
+
+    </style>
 </head>
 <body>
+    <!-- Navbar(header Section) -->
+
+    <!-- Middle Section -->
     <div id="parent">
-        <div>
-
+        <h1>Create an account</h1>
+        <p> * Indicates required field</p>
+        <div id="child1">
+            <div class="descendent1">
+                <div>
+                    <p>First name*</p>
+                    <input id="firstName" type="text" placeholder="First name here">
+                </div>
+                <div>
+                    <p>Last name*</p>
+                    <input id="lastName" type="text" placeholder="Last name here">
+                </div>
+                <div>
+                    <p>Password* (At least 7 characters)</p>
+                    <input id="password" type="text" placeholder="Please enter a minimmum of 7 characters">
+                </div>
+            </div>
+            <div class="descendent2">
+                <div>
+                    <p>Email address*</p>
+                    <input id="email" type="text" placeholder="yourname@example.com">
+                </div>
+                <div>
+                    <p>Confirm password*</p>
+                    <input id="confirmPassword" type="text" placeholder="Please reenter your password">
+                </div>
+            </div>
         </div>
+        <h3>Text Message (SMS) Alerts: (Optional)</h3>
+        <p>Do you want to sign up for Shopper alerts from SHOP.COM? (Message and data rates may apply.)</p>
+        <p>Mobile Phone</p>
+        <input id="" type="number" placeholder="">
         <div>
-
-        </div>
-        <div>
-
+            <p>Were you referred by a friend?</p>
+            <p>Enter their email address (Optional)</p>
+            <input type="text">
         </div>
     </div>
 </body>
