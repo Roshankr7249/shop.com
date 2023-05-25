@@ -1,160 +1,86 @@
 var cart=JSON.parse(localStorage.getItem("cartProduct")) || [];
-document.querySelector("button").addEventListener("click", check);
-// var ind=document.querySelector("#child").value;
-if(cart===0){
-   document.querySelector("body").value;
-  //  alert("Select item to cart")
+let randomval=Math.floor(Math.random()*100000+1);
+if(cart.length===0){
+   document.querySelector("body").textContent='do some shopping first....'
 }else{
 
   displayCart(cart);
-  updateCount(cart);
-  caltotal(cart)
-
-
-
 }
+// displayCart()
+
+
 function displayCart(cart){
-  document.querySelector("#child").textContent="";
-cart.map(function(elem,index){
-     var div =document.createElement("div");
-     div.setAttribute("id","cartprod");
-     var image=document.createElement("img");
-     image.setAttribute("src",elem.img_url);
-     image.setAttribute("alt",elem.name);
+  document.querySelector("#rkFirst").textContent="";
+cart.map(function(elem){
+  var div=document.createElement("div")
+  div.id="box";
 
-     var divp=document.createElement("div");
-     divp.setAttribute("class","clas");
+  var img=document.createElement("img");
+  img.src=elem.img_url;
+  img.id="cartimg";
 
-     var h3=document.createElement("h3");
-     h3.textContent=elem.name;
+  var div2=document.createElement("div")
+  div2.id="box2";
 
-    var p=document.createElement("p");
-    p.textContent=elem.color;
+  var h4=document.createElement("h4")
+  h4.id="prodname";
+  h4.textContent=elem.name;
 
-    var pa=document.createElement("p")
-    pa.textContent=elem.selected;
+  var price=document.createElement("p")
+  price.id="cartprice";
+  price.textContent="$"+elem.price+".00";
 
+  var h6=document.createElement("h6");
+  h6.id="rkh6";
+    h6.innerHTML=`+$2.06"<span id='dollar'>$</span> Cashback`
 
+  var h62=document.createElement("h6");
+  h62.style.fontSize="10px"
+  h62.innerHTML=`Item#: <span id='random'>${randomval}</span>`
 
-     var diva=document.createElement("div");
-     diva.setAttribute("id","rsk");
+  var p=document.createElement("p");
+  p.style.fontSize="10px"
+  p.textContent="Single Tube (1.08 fl oz/32 ml)";
 
-     var price=document.createElement("p");
-     price.textContent="₹"+elem.price;
-
-     var quantity=document.createElement("h2");
-       quantity.textContent="Quantity";
-
-       var span=document.createElement("span");
-       span.textContent=" "+"1";
-
-
-
-     var increase=document.createElement("button");
-     increase.setAttribute("id","btn")
-        increase.textContent="+";
-        increase.onclick=function(){
-          increaseval(span.textContent);
-        };
-        function increaseval(value){
-            var pr=parseInt(value)+1;
-            var va=pr*(elem.price);
-            span.textContent=pr;
-            price.textContent="₹"+va;
-            var a= document.getElementById("pr").textContent;
-           var last=parseInt(a)+parseInt(elem.price);
-           document.getElementById("pr").textContent=last;
-
-        }
-
-        var decrease=document.createElement("button");
-        decrease.setAttribute("id","btn")
-        decrease.textContent="-";
-        decrease.onclick=function(){
-          decreaseval(span.textContent);
-        };
-        function decreaseval(value){
-          if(value==1){
-              return ;
-           }else{
-          var pr=parseInt(value)-1;
-          var va=pr*elem.price
-          span.textContent=pr;
-            price.textContent="₹"+va;
-        var a= document.getElementById("pr").textContent;
-     var last=parseInt(a)-parseInt(elem.price);
-      document.getElementById("pr").textContent=last;
-      }
-
-
-
-
-
-          }
-
-
-        var tree=document.createElement("div");
-       tree.setAttribute("id","pers");
-
-       var del=document.createElement("button");
-       del.setAttribute("id","delbtn")
-       del.textContent="Delete";
-       del.addEventListener("click",function(){
-         delrow(elem);
-    })
-
-      quantity.append(span);
-      diva.append(price,increase,quantity,decrease);
-      divp.append(h3,p,pa);
-      tree.append(del);
-      div.append(image,divp,diva,tree);
-      document.querySelector("#child").append(div);
-
-
-});
-
-}
-
-function delrow(elem){
-
-      cart.splice(elem,1);
-      localStorage.setItem("cartData",JSON.stringify(cart))
-      displayCart(cart);
-      caltotal(cart);
-      updateCount(cart);
+  var span=document.createElement('span')
+  span.id='quantity'
+  var dropdown=document.createElement('select')
+  dropdown.id='drop'
+  for(var i=1; i<=10; i++){
+    var option=document.createElement('option')
+    option.value=i;
+    option.textContent=i;
+    dropdown.append(option)
+    if(i==10){
+      option.value=`'+'+${i}`
+    }
   }
-function updateCount(cart){
-  document.getElementById("per").textContent=cart.length;
+  var hr=document.createElement("hr")
+  hr.style.width="200%"
+
+  span.append(dropdown)
+
+  div2.append(h4, price, h6, h62, p, span,hr)
+
+  let box3=document.createElement('div')
+  box3.id='buttonsrk';
+
+  let btn1=document.createElement('button')
+  btn1.textContent='Save for Later'
+  btn1.id='saveLater'
+
+  let btn2=document.createElement('button')
+  btn2.textContent='Remove';
+  btn2.id='Remove';
+
+  box3.append(btn1, btn2)
+
+  div.append(img,div2, box3)
+
+  document.getElementById('rkFirst').append(div)
+     
+})
 }
 
 
-function caltotal(){
-  var carval=0;
-  for(var i=0;i<cart.length;i++){
-      carval+=parseInt(cart[i].price);
-
-  }
-  document.getElementById("pr").textContent=carval;
- }
-
-
-
-
- function check(){
-      var ch = document.getElementById("promo").value;
-      console.log(ch);
-      if(ch == "pw11"){
-          var temp = document.createElement("p");
-          temp.setAttribute("class","krp");
-          temp = "Congrats You are eligible for 30% off";
-          document.getElementById("Offer").append(temp);
-          var t = parseInt(document.getElementById("pr").textContent);
-          var change = (t*3)/10;
-          var anss=document.getElementById("pr");
-          anss.textContent = t - change;
-          localStorage.setItem("promoVal",anss.textContent);
-          anss.textContent=localStorage.getItem("promoVal");
-
-      }
-  }
-
+ 

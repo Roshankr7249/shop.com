@@ -1,0 +1,75 @@
+#rkukn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#rkank{
+    margin-top: 15px;
+}
+#mainContainer{
+    /* border: 3px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#rkFirst{
+
+    /* border:3px solid crimson; */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+}
+#box{
+    display: flex;
+    flex-direction: row;
+}
+
+#cartimg{
+    height: 100px;
+    width: 100px;
+    
+}
+
+#box2{
+    width: 40%;
+    line-height: 100%;
+
+}
+
+#prodname{
+    width: 45%;
+}
+#cartprice{
+    width: 45%;
+    
+}
+#rkh6{
+    font-size: 10px;
+}
+
+
+
+
+/* ...........for rkSecond ........*/
+#rktotal{
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+}
+#rkspan{
+    margin-top: 15px;
+}
+#offer{
+    display: flex;
+    flex-direction: column;
+}
+#rkend{
+    /* display: block; */
+  margin-left: 350px;
+  text-decoration: none;
+}
+#rkend1{
+    /* display: block; */
+  margin-left: 290px;
+}
