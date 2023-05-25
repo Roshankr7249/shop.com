@@ -75,6 +75,10 @@
         #phNumber {
             width: 400px;
             height: 37px;
+            /* padding-bottom: 3px;
+            padding-left: 3px; */
+            margin-bottom: 5px;
+            margin-left: 5px;
         }
 
         #referal input {
@@ -84,6 +88,30 @@
 
         #referal {
              box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        #captchaBox {
+            display: flex;
+            justify-content: space-around;
+             width: 25%;
+            /* height: 100px; */
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        #captchaBox div img{
+            width: 30%;
+        }
+
+        #captchaBox div label{
+          font-size: 15px; 
+        }
+
+        /* MEDIA QUERIES */
+        @media only  screen and (max-width: 480px) {
+          #child1 {
+          flex-direction: column;
+          text-align: center;
+          }
         }
 
     </style>
@@ -122,7 +150,7 @@
             </div>
         </div>
         <h3>Text Message (SMS) Alerts: (Optional)</h3>
-        <p>Do you want to sign up for Shopper alerts from SHOP.COM? (Message and data rates may apply.)</p>
+        <p><input type="checkbox">Do you want to sign up for Shopper alerts from SHOP.COM? (Message and data rates may apply.)</p>
         <p>Mobile Phone</p>
         <input id="phNumber" type="number" placeholder="Please enter your 10 digit phone number (i.e. 999 999 9999)">
         <div id="referal">
@@ -132,11 +160,21 @@
         </div>
         <p>Your Shop Consultant is SHOP.COM</p>
         <h3>Email deals: (Optional)</h3>
-        <p>Do you want to sign up for sweet email offers and discounts from SHOP.COM?</p>
-        <p>Do you want to sign up for sweet email offers and discounts from MarketAmerica.com and its brands?</p>
+        <p><input type="checkbox">Do you want to sign up for sweet email offers and discounts from SHOP.COM?</p>
+        <p><input type="checkbox">Do you want to sign up for sweet email offers and discounts from MarketAmerica.com and its brands?</p>
         <h5>Also, please confirm you are not a robot:</h5>
         <!-- Captcha Box -->
-        
+        <div id="captchaBox">
+            <div>
+            <input type="checkbox">
+            <label for="">I'm not a robot</label>
+            </div>
+            <div>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.9UiHysMW3h2Zv0-jA23lMQHaDi&pid=Api&rs=1&c=1&qlt=95&w=254&h=121" alt="recaptcha">
+                <a href="">Privacy-</a>
+                <a href="">Terms</a>
+            </div>
+        </div>
         <!-- end -->
         <button>Create your new Account</button>
         <p>By creating an account, you are agreeing to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></p>
