@@ -36,9 +36,16 @@
     line-height: 100%;
 
 }
+#quantity{
+    font-size: 16px;
+    font-weight: bold;
+}
 
 #prodname{
     width: 45%;
+}
+#rkItem{
+    margin-top: -20px;
 }
 #cartprice{
     width: 45%;
@@ -46,6 +53,8 @@
 }
 #rkh6{
     font-size: 10px;
+    margin-top: -10px;
+
 }
 
 
