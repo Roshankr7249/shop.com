@@ -44,43 +44,46 @@ cart.map(function(elem, idx){
   p.style.marginTop='-20px'
   p.textContent="Single Tube (1.08 fl oz/32 ml)";
 
-  var span=document.createElement('span')
-  span.id='quantity'
-  span.textContent='quantity:- '
-  var dropdown=document.createElement('select')
-  dropdown.id='drop'
+  var itemDetails = document.createElement("div");
+  itemDetails.id = "itemDetails";
+  var quantityLabel = document.createElement("label");
+        quantityLabel.setAttribute("for", "quantityDropdown");
+        quantityLabel.textContent = "Quantity:";
+        itemDetails.appendChild(quantityLabel);
 
-  
-  for(var i=1; i<=10; i++){
-    var option=document.createElement('option')
-    option.value=i;
-    option.textContent=i;
-    option.id=i;
-    dropdown.append(option)
-    if(i==10){
-      option.value=`${i}`
-      option.textContent=`${i}+`
-    }
-     }
-dropdown.addEventListener('click', function(){
-  var opval=document.getElementById('drop').value;
-  var pr=opval*elem.price;
-  price.textContent=pr;
-  
- var a=document.getElementById("rkspan").textContent;
- var last=Number(a)+Number(elem.price);
- document.getElementById("rkspan").textContent=last;
-  
-})
+        var quantityDropdown = document.createElement("select");
+        quantityDropdown.id = "quantityDropdown";
+        quantityDropdown.addEventListener("change", updatePrice);
 
+        var quantities = [1, 2, 3, 4, 5,6,7,8,9,10];
+        for (var i = 0; i < quantities.length; i++) {
+            var option = document.createElement("option");
+            option.value = quantities[i];
+            option.textContent = quantities[i];
+            quantityDropdown.appendChild(option);
+        }
+
+        itemDetails.appendChild(quantityDropdown);
+        function updatePrice() {
+          var dropdown = document.getElementById("quantityDropdown");
+          var selectedQuantity = dropdown.value;
+          var totalPrice = selectedQuantity *elem.price;
+          price.textContent="$"+totalPrice;
+          var a=document.getElementById("rkspan").textContent;
+          var last=Number(a)+Number(totalPrice);
+          document.getElementById("rkspan").textContent=last;
+             
+        
+      }
+    
   
  
   var hr=document.createElement("hr")
   hr.style.width="200%"
 
-  span.append(dropdown)
+  // span.append(dropdown)
 
-  div2.append(h4, price, h6, h62, p, span,hr)
+  div2.append(h4, price, h6, h62, p, itemDetails,hr)
 
   let box3=document.createElement('div')
   box3.id='buttonsrk';
@@ -111,12 +114,42 @@ function rkRemoveItem(elem, idx){
   displayCart(cart)
 }
 totalPrice();
+var totalAmount=0;
 function totalPrice(){
    var total=0;
    for(var i=0;i<cart.length;i++){
     total+=cart[i].price;
    }
    document.getElementById("rkspan").textContent=total;
+   totalAmount=total;
+}
+
+
+document.getElementById("rkbtn").addEventListener("click", shippingCharge)
+
+
+function shippingCharge() {
+  let zip =document.getElementById("rkin").value;
+  if (zip.length === 6) {
+      document.getElementById("shipping").innerText = "Shipping: $0.00";
+  }
+  else {
+    document.getElementById("shipping").innerText = "Enter Valid Zipcode";
+  }
+}
+
+// <------Checkout page-------->
+
+
+
+document.getElementById("rkch2").addEventListener("click", ()=>{
+  checkout();
+})
+
+function checkout() {
+  
+  localStorage.setItem("CartTotal", JSON.stringify(totalAmount));
+  window.location.href = "./product.html"
 }
 
  
