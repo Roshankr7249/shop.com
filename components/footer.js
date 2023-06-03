@@ -1,87 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cart.css">
-    <title>Your cart</title>
-   
-</head>
-<body>
-   
-    <a href="D:\test\shop\shop.com\product.html">product</a>
-    <h2 id="headrk">Your Cart</h2>
-    <br>
-    <h3 id="ship">Shipment from Market America</h3>
-    <hr>
-    <div id="rkukn">
-        <p>Add $99.25 in Market America products to qualify for Free Shipping!</p>
-    <a id="rkank" href="#">LearnMore</a>
-    </div>
-    
-    <div id="mainContainer">
-        
-        <div id="rkFirst">
-            
-        </div>
-        <div id="rkSecond">
-            <h3>Order Total</h3>
-            <hr>
-            <div id="rktotal">
-                <p>Subtotal:</p>
-                <p>$<span id="rkspan">0</span></p>
-               
-            </div>
-            <div id="offer">
-                <a style="text-decoration: none" href="#">or 4 interest-free payments of $6.44 with Sezzle for orders</a>
-               <a id="rkend" href="#">over $35</a>
-                <a id="rkend1" href="#">Continue Shopping</a>
-            </div>
-            
-
-            <div id="zip">
-                <input id="rkin" type="number" name="zip" placeholder="Zip Code">
-                <button id="rkbtn">Estimate Shipping</button>
-                
-            </div>
-            <div id="valid">
-                <p id="shipping"></p>
-            </div>
-            <br>
-            <div id="checkout">
-                <button id="rkch2">Proceed To Checkout</button> 
-            </div>
-
-            <div id="rkcheck">
-                <div id="rkc1">or checkout with</div>
-                <div id="rkcheck1">
-                    <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/ppcredit_MD_BNPOT_1x.png"
-                        alt="">
-                    <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png"
-                        alt="">
-                
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="footer">
-
-
-        <div class="connect">
+function footer() {
+    return ` <div class="connect">
 
             <div id="connect1">
                 <div id="conn">
@@ -170,9 +88,7 @@
                     <img src="https://aboutssl.org/wp-content/uploads/2019/10/digicert-site-seal.svg" alt="">
                 </a>
             </div>
-        </div>
-    </div>
-</body>
-</html>
+        </div>`
+}
 
-<script src = "cart.js"></script>
+export { footer }
