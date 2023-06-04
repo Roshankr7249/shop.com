@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Accessories</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://kit.fontawesome.com/4c322811d7.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="../Styles/products.css"> -->
+  <link rel="icon" type="image/x-icon" href="https://img.shop.com/Image/resources/homepage/shop-homepage-icon.svg">
+
+<style>
+  body {
+        font-family: "Arial";
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #top_description {
+        display: flex;
+        justify-content: space-between;
+        height: fit-content;
+        place-items: center;
+        padding: 10px;
+        margin-left: 25px;
+    }
+
+
+ #x{
+    margin-left: 40px;
+    margin-top: -10px;
+    font-size: 12px;
+ }
+ #y{
+    margin-left: 40px;
+    margin-top: 20px;
+ }
+
+
+
+    #parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+    }
+
+    #parent>div {
+        padding: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    #mainbody {
+        display: flex;
+        justify-content: space-between;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    }
+
+    #side_sec{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+#price_filter{
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    color:rgb(86, 90, 92);
+    border: rbg(86, 90, 92);
+    padding: 10px;
+    border: none;
+    /* margin-bottom: 8px;   */
+}
+#demo_filter{
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    color:rgb(86, 90, 92);
+    border: rbg(86, 90, 92);
+    padding: 10px;
+    border: none;
+    margin-bottom: 8px;
+    } 
+
+</style>
+
+</head>
+
+<body>
+  <div id="top_description">
+    <h1>Men's Shoes</h2>
+
+        <p> Sort : <span>
+                <select id="sort">
+                    <option value="">Relevance</option>
+                    <option value="lowToHigh">Low To High</option>
+                    <option value="HighToLow">High To Low</option>
+                </select></span></p>
+</div>
+<p id="x">Showing 1-48 of 100 result</p>
+<h3 id="y">Refine Result</h3>
+<div id="mainbody">
+    <div id="side_sec">
+        <select id="price_filter">
+            <option value="">PRICE</option>
+            <option value="30-50">$30.00-$50.00</option>
+            <option value="50-70">$50.00-$70.00</option>
+            <option value="70-90">$70.00-$90.00</option>
+        </select>
+        <hr>
+        <select id="demo_filter">
+            <option value="">SIZES</option>
+            <option value="X">X</option>
+            <option value="XX">XX</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="XXL">XXL</option>
+        </select>
+        <hr>
+        <select id="demo_filter">
+            <option value="">BRAND</option>
+            <option value="Regular">NIKE</option>
+        </select>
+        <hr>
+        <select id="demo_filter">
+            <option value="">LEAGUE</option>
+            <option value="Up to 20%">Up to 20%</option>
+            <option value="Up to 30%">Up to 30%</option>
+            <option value="Up to 40%">Up to 40%</option>
+            <option value="Up to 50%">Up to 50%</option>
+            <option value="Up to 60%">Up to 60%</option>
+        </select>
+        <hr>
+        <select id="demo_filter">
+            <option value="">COLORS</option>
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Pink">Pink</option>
+            <option value="Blue">Blue</option>
+            <option value="Black">Black</option>
+            <option value="Orange">Orange</option>
+            <option value="Purple">Purple</option>
+            <option value="White">White</option>
+        </select>
+        
+    </div>
+    <div id="parent">
+        <!-- this section is appended using javascript methods -->
+    </div>
+</div>
+</body>
+
+</html>
+<script> 
+var mens_data = [
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1883013482.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/253200/253251/products/1938891297.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/260000/264900/264928/products/1917637948.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/260000/263300/263362/products/1967689915.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/260000/263300/263362/products/1967689915.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/259100/259190/products/1870581443.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/260000/263300/263362/products/1967689915.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+   
+    
+]
+
+displayproduct(mens_data)
+function displayproduct(mens_data){
+    document.getElementById("parent").innerHTML="";
+    mens_data.map(function(el){
+        var div = document.createElement("div");
+        var img = document.createElement("img");
+        img.setAttribute("src",el.img_url);
+        img.setAttribute("alt",el.name);
+        img.setAttribute("class","product_image");
+        var desc = document.createElement("p");
+        desc.textContent = el.desc;
+        var name = document.createElement("h3");
+        name.textContent = el.name;
+        var price = document.createElement("p");
+        price.textContent = "$"+el.price+".00";
+        div.addEventListener("click",function(){
+            navToNextPage(el);
+        });
+        div.append(img,desc,name,price);
+     document.getElementById("parent").append(div);
+    })
+    
+}
+var product_desc = [];
+function navToNextPage(product){
+    product_desc.push(product);
+    localStorage.setItem("decription_data",JSON.stringify(product_desc));
+    window.location.href="./productDetails.html";
+}
+document.getElementById("sort").addEventListener("change",pricesort);
+function pricesort(){
+    
+    var selected = document.getElementById("sort").value;
+    if (selected == "HighToLow") {
+        
+    var newarr = mens_data.sort(function(a,b){
+      return parseInt(b.price) - parseInt(a.price);
+    });
+    displayproduct(newarr);
+    }
+
+    if(selected == "lowToHigh"){
+        console.log("helllo");
+    var newarr2 = mens_data.sort(function(a,b){
+      return parseInt(a.price) - parseInt(b.price);
+    });
+    displayproduct(newarr2);
+    }
+    if(selected == ""){
+        displayproduct(mens_data);
+    }
+}
+document.getElementById("price_filter").addEventListener("change",filterbyprice);
+function filterbyprice(){
+    var selected = document.getElementById("price_filter").value;
+    if(selected=="30-50"){
+        var newarr = mens_data.filter(function(el){
+            return (el.price>=30 && el.price<=50)
+
+        })
+        displayproduct(newarr);
+    }
+    if(selected=="50-70"){
+        var newarr = mens_data.filter(function(el){
+            return (el.price>=50 && el.price<=70)
+
+        })
+        displayproduct(newarr);
+    }
+    if(selected=="70-90"){
+        var newarr = mens_data.filter(function(el){
+            return (el.price>=70 && el.price<=90)
+
+        })
+        displayproduct(newarr);
+    }
+    if(selected==""){
+        displayproduct(mens_data);
+    }
+}
+</script>
