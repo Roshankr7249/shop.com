@@ -33,7 +33,39 @@ document.getElementById("shop_login_form").addEventListener("submit", function (
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-   
+    // createUserWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         // Signed in 
+    //         const user = userCredential.user;
+    //         // ...
+    //         set(ref(database, 'users/' + user.uid), {
+    //             email: email,
+    //             password: password,
+                
+    //         })
+    //             .then(() => {
+    //                 // Data saved successfully!
+    //                 console.log("created")
+    //                 alert("account created successfully")
+    //             })
+    //             .catch((error) => {
+    //                 // The write failed...
+    //                 alert(error)
+    //             });
+
+
+
+
+
+    //     })
+    //     .catch((error) => {
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
+    //         // ..
+    //         console.log(errorMessage)
+    //         alert("Error:" + errorCode)
+    //     });
+
 
 
     signInWithEmailAndPassword(auth, email, password)
@@ -49,7 +81,7 @@ document.getElementById("shop_login_form").addEventListener("submit", function (
                         // Data saved successfully!
                         console.log("created")
                         alert("Logged in successfully")
-                        window.location.href = "/index.html"
+                        window.location.href = "index.html"
                     })
                     .catch((error) => {
                         // The write failed...

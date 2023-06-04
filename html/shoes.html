@@ -5,204 +5,354 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shoes</title>
+
+  <title>Accessories</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <script src="https://kit.fontawesome.com/4c322811d7.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="../Styles/products.css">
+  <!-- <link rel="stylesheet" href="../Styles/products.css"> -->
   <link rel="icon" type="image/x-icon" href="https://img.shop.com/Image/resources/homepage/shop-homepage-icon.svg">
+
+<style>
+  body {
+        font-family: "Arial";
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #top_description {
+        display: flex;
+        justify-content: space-between;
+        height: fit-content;
+        place-items: center;
+        padding: 10px;
+        margin-left: 25px;
+    }
+
+
+ #x{
+    margin-left: 40px;
+    margin-top: -10px;
+    font-size: 12px;
+ }
+ #y{
+    margin-left: 40px;
+    margin-top: 20px;
+ }
+
+
+
+    #parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+    }
+
+    #parent>div {
+        padding: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    #mainbody {
+        display: flex;
+        justify-content: space-between;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    }
+
+    #side_sec{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+#price_filter{
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    color:rgb(86, 90, 92);
+    border: rbg(86, 90, 92);
+    padding: 10px;
+    border: none;
+    /* margin-bottom: 8px;   */
+}
+#demo_filter{
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    color:rgb(86, 90, 92);
+    border: rbg(86, 90, 92);
+    padding: 10px;
+    border: none;
+    margin-bottom: 8px;
+    } 
+
+</style>
 
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav"> </div>
-  <!-- ---------------navbar----------------- -->
-  <div id="navbar"></div>
-  <!-- ----------middle part----------- -->
-  <div id="main">
+  <div id="top_description">
+    <h1>Men's Shoes</h2>
 
-    <div id="sidenavv">
-
-      <input id="topcheck" type="checkbox">
-      <label id="toplabel" for="">OneCart <span>(189,680)</span></label>
-      <!-- <label for=""><img src="https://img.shop.com/Image/resources/images/onecart-logo_icon.svg" alt=""></label> -->
-      <div id="checkbox">
-        <input type="checkbox">
-        <label for="">Sale items (369,817)</label><br>
-        <input type="checkbox">
-        <label for="">shipping Offers</label>
-      </div>
-
-      <button class="dropdown-btn">Shoe Type
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Sandals (38,146)</a>
-        <a href="#">Boots (26,985)</a>
-        <a href="#">Heels (12,413)</a>
-        <a href="#">Athletic (11,798)</a>
-        <a href="#">Slip-Ons (8,454)</a>
-        <a href="#">Flats (5,476)</a>
-        <a href="#">Mules (4,443)</a>
-        <a href="#">Slippers (2,025)</a>
-        <a href="#">Oxfords (714)</a>
-        <a href="#">+ See More</a>
-      </div>
-
-      <button class="dropdown-btn">Sandal Style
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Slides (7,720)</a>
-        <a href="#">Wedges (4,975)</a>
-        <a href="#">Espadrilles (1,817)</a>
-        <a href="#">Ankle Strap (1,310)</a>
-        <a href="#">Flip Flops (1,293)</a>
-        <a href="#">Thongs (956)</a>
-        <a href="#">Slingback (759)</a>
-        <a href="#">T-Strap (425)</a>
-        <a href="#">Gladiator (381)</a>
-        <a href="#">Sport (337)</a>
-        <a href="#">+ See More</a>
-      </div>
-
-      <button class="dropdown-btn">Color
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Beige (25,431)</a>
-        <a href="#">Black (138,251)</a>
-        <a href="#">Blue (98,057)</a>
-        <a href="#">Brown (17,187)</a>
-        <a href="#">Gray (26,607)</a>
-        <a href="#">Green (33,339)</a>
-        <a href="#">Off-White (13,804)</a>
-        <a href="#">Pink (43,144)</a>
-        <a href="#">Purple (20,721)</a>
-        <a href="#">Red (27,032)</a>
-        <a href="#">+ See More</a>
-      </div>
-
-
-      <button class="dropdown-btn">Material
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Textiles (52,852)</a>
-        <a href="#">Leather (42,477)</a>
-        <a href="#">Rubber (25,554)</a>
-        <a href="#">Plastic (792)</a>
-        <a href="#">Wood (601)</a>
-      </div>
-
-
-      <button class="dropdown-btn">Size
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">5½ (5,590)</a>
-        <a href="#">6 (8,789)</a>
-        <a href="#">6½ (10,152)</a>
-        <a href="#">7 (10,327)</a>
-        <a href="#">7½ (11,081)</a>
-        <a href="#">8 (10,156)</a>
-        <a href="#">8½ (11,020)</a>
-        <a href="#">9 (9,919)</a>
-        <a href="#">9½ (8,433)</a>
-        <a href="#">10 (3,048)</a>
-        <a href="#">+ See More</a>
-      </div>
-
-
-      <button class="dropdown-btn">Boots Style
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Booties (7,074)</a>
-        <a href="#">Ankle (3,120)</a>
-        <a href="#">Knee-High (1,916)</a>
-        <a href="#">Rain & Snow (1,897)</a>
-        <a href="#">Over-the-Knee (1,328)</a>
-        <a href="#">Western (938)</a>
-        <a href="#">Mid-Calf (452)</a>
-        <a href="#">Hiking (411)</a>
-        <a href="#">Work & Safety (200)</a>
-        <a href="#">Motorcycle (48)</a>
-        <a href="#">+ See More</a>
-      </div>
-
-
-      <button class="dropdown-btn">Athletic Style
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Sneakers (7,540)</a>
-        <a href="#">Walking (1,211)</a>
-        <a href="#">Running (1,004)</a>
-        <a href="#">Cross-Training (671)</a>
-        <a href="#">Skate (53)</a>
-        <a href="#">Tennis (25)</a>
-        <a href="#">Climbing (16)</a>
-        <a href="#">Golf (10)</a>
-        <a href="#">Dance (2)</a>
-        <a href="#">Volleyball (3)</a>
-        <a href="#">+ See More</a>
-      </div>
-
-      <button class="dropdown-btn">Brand
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Journee Collection (17,813)</a>
-        <a href="#">Easy Street (4,911)</a>
-        <a href="#">Clarks (2,004)</a>
-        <a href="#">Easy Spirit (2,057)</a>
-        <a href="#">Skechers (1,940)</a>
-        <a href="#">Steve Madden (1,599)</a>
-        <a href="#">Naturalizer (1,258)</a>
-        <a href="#">Nine West (1,314)</a>
-        <a href="#">Lugz (997)</a>
-        <a href="#">Muk Luks (955)</a>
-        <a href="#">+ See More</a>
-      </div>
-
-      <button class="dropdown-btn">Store
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">JCPenney (32,224)</a>
-        <a href="#">PairMySole (18,050)</a>
-        <a href="#">BHFO (15,064)</a>
-        <a href="#">Macy's (10,370)</a>
-        <a href="#">boohoo (8,976)</a>
-        <a href="#">BOBBI + BRICKA (4,689)</a>
-        <a href="#">Kohl's (4,426)</a>
-        <a href="#">Rue La La (4,243)</a>
-        <a href="#">GILT (4,200)</a>
-        <a href="#">UnbeatableSale (2,494)</a>
-        <a href="#">+ See More</a>
-      </div>
-
-      <button class="dropdown-btn">Price Range
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">$30.00 and Below (27,313)</a>
-        <a href="#">$30.01 - $50.00 (26,664)</a>
-        <a href="#">$50.01 - $65.00 (20,817)</a>
-        <a href="#">$65.01 - $95.00 (21,036)</a>
-        <a href="#">$95.01 and Above (20,294)</a>
-      </div>
-
+        <p> Sort : <span>
+                <select id="sort">
+                    <option value="">Relevance</option>
+                    <option value="lowToHigh">Low To High</option>
+                    <option value="HighToLow">High To Low</option>
+                </select></span></p>
+</div>
+<p id="x">Showing 1-48 of 100 result</p>
+<h3 id="y">Refine Result</h3>
+<div id="mainbody">
+    <div id="side_sec">
+        <select id="price_filter">
+            <option value="">PRICE</option>
+            <option value="30-50">$30.00-$50.00</option>
+            <option value="50-70">$50.00-$70.00</option>
+            <option value="70-90">$70.00-$90.00</option>
+        </select>
+        <hr>
+        <select id="demo_filter">
+            <option value="">SIZES</option>
+            <option value="X">X</option>
+            <option value="XX">XX</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="XXL">XXL</option>
+        </select>
+        <hr>
+        <select id="demo_filter">
+            <option value="">BRAND</option>
+            <option value="Regular">NIKE</option>
+        </select>
+        <hr>
+        <select id="demo_filter">
+            <option value="">LEAGUE</option>
+            <option value="Up to 20%">Up to 20%</option>
+            <option value="Up to 30%">Up to 30%</option>
+            <option value="Up to 40%">Up to 40%</option>
+            <option value="Up to 50%">Up to 50%</option>
+            <option value="Up to 60%">Up to 60%</option>
+        </select>
+        <hr>
+        <select id="demo_filter">
+            <option value="">COLORS</option>
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Pink">Pink</option>
+            <option value="Blue">Blue</option>
+            <option value="Black">Black</option>
+            <option value="Orange">Orange</option>
+            <option value="Purple">Purple</option>
+            <option value="White">White</option>
+        </select>
+        
     </div>
-    <div id="container"></div>
-
-  </div>
-  <!-- --------footer-------------- -->
-  <div id="footer"></div>
+    <div id="parent">
+        <!-- this section is appended using javascript methods -->
+    </div>
+</div>
 </body>
 
 </html>
+<script> 
+var mens_data = [
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1883013482.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/253200/253251/products/1938891297.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/260000/264900/264928/products/1917637948.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/260000/263300/263362/products/1967689915.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/260000/263300/263362/products/1967689915.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/259100/259190/products/1870581443.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/250000/254500/254570/products/1951957209.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+    {
+        img_url:"https://img.shop.com/Image/260000/263300/263362/products/1967689915.jpg?plain&size=400x400",
+        name: "Sonic The Hedgehog Boys Legendary Gamer Short Sleeve 2 Pc Pajama Set",
+        desc:"Sold by Pentaxyl®",
+        price: 83.95,
+        size : ['S','M','L','XL','XXL'],
+        color : "Free shipping with $125 orders",
+    },
+   
+    
+]
 
-<script src="/src/shoes.js" type="module"></script>
+displayproduct(mens_data)
+function displayproduct(mens_data){
+    document.getElementById("parent").innerHTML="";
+    mens_data.map(function(el){
+        var div = document.createElement("div");
+        var img = document.createElement("img");
+        img.setAttribute("src",el.img_url);
+        img.setAttribute("alt",el.name);
+        img.setAttribute("class","product_image");
+        var desc = document.createElement("p");
+        desc.textContent = el.desc;
+        var name = document.createElement("h3");
+        name.textContent = el.name;
+        var price = document.createElement("p");
+        price.textContent = "$"+el.price+".00";
+        div.addEventListener("click",function(){
+            navToNextPage(el);
+        });
+        div.append(img,desc,name,price);
+     document.getElementById("parent").append(div);
+    })
+    
+}
+var product_desc = [];
+function navToNextPage(product){
+    product_desc.push(product);
+    localStorage.setItem("decription_data",JSON.stringify(product_desc));
+    window.location.href="./productDetails.html";
+}
+document.getElementById("sort").addEventListener("change",pricesort);
+function pricesort(){
+    
+    var selected = document.getElementById("sort").value;
+    if (selected == "HighToLow") {
+        
+    var newarr = mens_data.sort(function(a,b){
+      return parseInt(b.price) - parseInt(a.price);
+    });
+    displayproduct(newarr);
+    }
+
+    if(selected == "lowToHigh"){
+        console.log("helllo");
+    var newarr2 = mens_data.sort(function(a,b){
+      return parseInt(a.price) - parseInt(b.price);
+    });
+    displayproduct(newarr2);
+    }
+    if(selected == ""){
+        displayproduct(mens_data);
+    }
+}
+document.getElementById("price_filter").addEventListener("change",filterbyprice);
+function filterbyprice(){
+    var selected = document.getElementById("price_filter").value;
+    if(selected=="30-50"){
+        var newarr = mens_data.filter(function(el){
+            return (el.price>=30 && el.price<=50)
+
+        })
+        displayproduct(newarr);
+    }
+    if(selected=="50-70"){
+        var newarr = mens_data.filter(function(el){
+            return (el.price>=50 && el.price<=70)
+
+        })
+        displayproduct(newarr);
+    }
+    if(selected=="70-90"){
+        var newarr = mens_data.filter(function(el){
+            return (el.price>=70 && el.price<=90)
+
+        })
+        displayproduct(newarr);
+    }
+    if(selected==""){
+        displayproduct(mens_data);
+    }
+}
+</script>

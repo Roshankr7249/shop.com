@@ -4,9 +4,295 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/cart.css">
+    <link rel="stylesheet" href="cart.css">
     <title>Your cart</title>
+   <style>
+    #rkukn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#rkank{
+    margin-top: 15px;
+}
+#mainContainer{
+    /* border: 3px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#rkFirst{
+
+    /* border:3px solid crimson; */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+}
+#box{
+    display: flex;
+    flex-direction: row;
+}
+
+#cartimg{
+    height: 100px;
+    width: 100px;
+    
+}
+
+#box2{
+    width: 40%;
+    line-height: 100%;
+
+}
+#quantity{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#prodname{
+    width: 45%;
+}
+#rkItem{
+    margin-top: -20px;
+}
+#cartprice{
+    width: 45%;
+    
+}
+#rkh6{
+    font-size: 10px;
+    margin-top: -10px;
+
+}
+
+
+
+
+/* ...........for rkSecond ........*/
+#rkSecond{
+    background-color: #f0f1f7;
+    padding-left: 10px;
+    height: 400px;
+    /* border: solid red; */
+}
+#rktotal{
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+}
+#rkspan{
+    margin-top: 15px;
+}
+#offer{
+    display: flex;
+    flex-direction: column;
+}
+#rkend{
+    /* display: block; */
+  margin-left: 350px;
+  text-decoration: none;
+}
+#rkend1{
+    /* display: block; */
+  margin-left: 290px;
+}
+
+#zip{
+    /* border: 2px solid red; */
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 5%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    background-color: white;
+    align-items: center;
+
+}
+
+#rkin{
+    width: 30%;
+    height: 70%;
+    border: 1px solid #202340;
+    font: normal 0.75rem Arial,Helvetica,sans-serif;
+    color: #202340;
+    box-sizing: border-box;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    background-color: field;
+    
+}
+#rkbtn{
+    border: 3px solid rgb(41, 2, 41);
+    height: 80%;
+    color: rgb(41, 2, 41);
+    font-weight: bolder ;
+    font-size: 14px;
+    width: 65%;
+    border-radius: 30px;
+
+}
+#valid{
+    text-align: center;
+}
+
+
+#checkout{
+    text-align: end;
+    height: 7%;
+    padding-right: 10px;
    
+}
+#checkout button{
+    background-color: #414467;
+    border: 1px solid #414467;
+    color: #fff;
+    font-weight: bolder;
+    height: 80%;
+    border-radius: 24px;
+}
+#rkcheck{
+    display: flex;
+    flex-direction: column;
+    /* border: 3px solid yellow; */
+    width: 70%;
+    margin-left: 20%;
+    height: 30%;
+    
+}
+#rkc1{
+    width: 25%;
+    font-size: 10px;
+    /* border: 2px solid red; */
+    background-color: white;
+}
+#rkcheck1{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    background-color: white;
+    height: 80%;
+    
+}
+
+
+
+
+
+
+/* .................................footer............................. */
+
+
+
+
+
+
+.connect {
+    background-color: #545871;
+    color: white;
+}
+
+#connect1,
+#conn,
+#connect2,
+#ac,
+#images,
+#social,
+#connect2>div:nth-child(1) {
+    display: flex;
+
+}
+
+#connect1 {
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font: 13px;
+}
+
+#conn {
+    gap: 40px;
+    align-items: center;
+}
+
+#connect2 {
+    justify-content: space-between;
+}
+
+#ac {
+    gap: 10px;
+    align-items: center;
+}
+
+#ac a,
+#a {
+    color: white;
+}
+
+#info {
+    font-size: 13px;
+    line-height: 12px;
+    padding: 7px 0 2px 10px;
+    color: #202340;
+    background-color: #f0f1f7;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.ancor>a {
+    color: black;
+}
+
+#images {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    justify-content: space-between;
+    background-color: #f0f1f7;
+}
+
+#images img {
+    height: 80px;
+    width: 80px;
+}
+
+#image {
+    margin: auto;
+    width: 10%;
+}
+
+#image>div>a>img {
+    height: 100px;
+    width: 120px;
+}
+
+#social {
+    align-items: center;
+}
+
+#social i {
+    width: 45px;
+    color: white;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+#connect2>div:nth-child(1) {
+    justify-content: space-between;
+}
+
+#footer {
+    background-color: #f0f1f7;
+}
+   </style>
 </head>
 <body>
    
@@ -175,4 +461,160 @@
 </body>
 </html>
 
-<script src = "../src/cart.js"></script>
+<script>
+    var cart=JSON.parse(localStorage.getItem("cartData")) || [];
+let randomval=Math.floor(Math.random()*100000+1);
+if(cart.length==0){
+   document.querySelector("body").textContent='do some shopping first....'
+}else{
+
+  displayCart(cart);
+}
+// displayCart()
+
+
+function displayCart(cart){
+  document.querySelector("#rkFirst").textContent="";
+cart.map(function(elem, idx){
+  var div=document.createElement("div")
+  div.id="box";
+
+  var img=document.createElement("img");
+  img.src=elem.img_url;
+  img.id="cartimg";
+
+  var div2=document.createElement("div")
+  div2.id="box2";
+
+  var h4=document.createElement("h4")
+  h4.id="prodname";
+  h4.textContent=elem.name;
+
+  var price=document.createElement("p")
+  price.textContent="$"+elem.price;
+  price.id="cartprice";
+
+  var h6=document.createElement("h6");
+  h6.id="rkh6";
+    h6.innerHTML=`+$2.06"<span id='dollar'>$</span> Cashback`
+
+  var h62=document.createElement("h6");
+  h62.style.fontSize="10px"
+  h62.id="rkItem"
+  h62.innerHTML=`Item#: <span id='random'>${randomval}</span>`
+
+  var p=document.createElement("p");
+  p.style.fontSize="10px"
+  p.style.marginTop='-20px'
+  p.textContent="Single Tube (1.08 fl oz/32 ml)";
+
+  var itemDetails = document.createElement("div");
+  itemDetails.id = "itemDetails";
+  var quantityLabel = document.createElement("label");
+        quantityLabel.setAttribute("for", "quantityDropdown");
+        quantityLabel.textContent = "Quantity:";
+        itemDetails.appendChild(quantityLabel);
+
+        var quantityDropdown = document.createElement("select");
+        quantityDropdown.id = "quantityDropdown";
+        quantityDropdown.addEventListener("change", updatePrice);
+
+        var quantities = [1, 2, 3, 4, 5,6,7,8,9,10];
+        for (var i = 0; i < quantities.length; i++) {
+            var option = document.createElement("option");
+            option.value = quantities[i];
+            option.textContent = quantities[i];
+            quantityDropdown.appendChild(option);
+        }
+
+        itemDetails.appendChild(quantityDropdown);
+        function updatePrice() {
+          var dropdown = document.getElementById("quantityDropdown");
+          var selectedQuantity = dropdown.value;
+          var totalPrice = selectedQuantity *elem.price;
+          price.textContent="$"+totalPrice;
+          var a=document.getElementById("rkspan").textContent;
+          var last=Number(a)+Number(totalPrice);
+          document.getElementById("rkspan").textContent=last;
+             
+        
+      }
+    
+  
+ 
+  var hr=document.createElement("hr")
+  hr.style.width="200%"
+
+  // span.append(dropdown)
+
+  div2.append(h4, price, h6, h62, p, itemDetails,hr)
+
+  let box3=document.createElement('div')
+  box3.id='buttonsrk';
+
+  let btn1=document.createElement('button')
+  btn1.textContent='Save for Later'
+  btn1.id='saveLater'
+
+  let btn2=document.createElement('button')
+  btn2.textContent='Remove';
+  btn2.id='Remove';
+  btn2.addEventListener('click', function(){
+    rkRemoveItem(elem, idx)
+  })
+
+  box3.append(btn1, btn2)
+
+  div.append(img,div2, box3)
+
+  document.getElementById('rkFirst').append(div)
+     
+})
+}
+
+function rkRemoveItem(elem, idx){
+  cart.splice(idx,1)
+  localStorage.setItem("cartData", JSON.stringify(cart))
+  displayCart(cart)
+}
+totalPrice();
+var totalAmount=0;
+function totalPrice(){
+   var total=0;
+   for(var i=0;i<cart.length;i++){
+    total+=cart[i].price;
+   }
+   document.getElementById("rkspan").textContent=total;
+   totalAmount=total;
+}
+
+
+document.getElementById("rkbtn").addEventListener("click", shippingCharge)
+
+
+function shippingCharge() {
+  let zip =document.getElementById("rkin").value;
+  if (zip.length === 6) {
+      document.getElementById("shipping").innerText = "Shipping: $0.00";
+  }
+  else {
+    document.getElementById("shipping").innerText = "Enter Valid Zipcode";
+  }
+}
+
+// <------Checkout page-------->
+
+
+
+document.getElementById("rkch2").addEventListener("click", ()=>{
+  checkout();
+})
+
+function checkout() {
+  
+  localStorage.setItem("CartTotal", JSON.stringify(totalAmount));
+  window.location.href = "address.html"
+}
+
+ 
+</script>

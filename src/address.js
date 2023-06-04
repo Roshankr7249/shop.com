@@ -35,6 +35,10 @@ p5.addEventListener('click', open);
 function open() {
     window.location.href = "./shipping address form.html"
 }
+document.getElementById("save").addEventListener('click', saveBtn);
+function saveBtn(){
+    window.location.href = "./shipping.html"
+}
 box5.append(p4, p5);
 box4.append(p1, p2, p3, box5);
 
