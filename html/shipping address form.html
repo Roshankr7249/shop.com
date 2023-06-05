@@ -6,9 +6,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../Styles/shipping address form.css">
-    <link rel="stylesheet" href="../Styles/navbar2.css">
+    
     <link rel="icon" type="image/x-icon" href="https://img.shop.com/Image/resources/homepage/shop-homepage-icon.svg">
+    <style>
+        *{
+    font-family: 'Roboto';
+}
+#body{
+    margin-top: 70px;
+}
+#heading_ship{
+    color:#202340;
+    font-family: 'Roboto','Arial';
+    margin-left:10px;
+    /* margin-top: 10px; */
+    padding-top: 15px;
+}
+#fiels{
+    font-size: 14px;
+    font-family: 'Roboto','Arial';
+    color:#545871;
+
+}
+#form{
+    display: grid;
+    grid-template-columns: repeat(2,45%);
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+.label{
+    /* font-size: .875rem; */
+    display: block;
+    margin-left: 10px;
+    font-size: 20px;
+    
+}
+#form input{
+    font-size: 20px;
+    padding: 12px;
+    margin-top: 8px;
+    font-style: italic;
+    width: 95%;
+    margin-bottom: 25px;
+}
+select{
+    font-size: 18px;
+    padding: 12px;
+    margin-top: 8px;
+    /* font-style: italic; */
+    width: 95%;
+    margin-bottom: 25px;
+    font-weight: bolder;
+
+}
+/* #label1{
+    margin-left: 5px;
+    font-size: 15px;
+    color: #202340;
+
+} */
+#_box{
+    display: flex;
+    margin-left: 10px;
+    padding: 5px;
+}
+#phone{
+    font-size: 20px;
+    margin-top: 20px;
+    
+}
+#phone input{
+    width: 30%;
+    font-size: 18px;
+    padding: 12px;
+}
+#box2{
+    display: flex;
+}
+#box2 label{
+    font-size: 18px;
+}
+#checkbox1{
+    position: relative;
+      cursor: pointer;
+}
+ #checkbox1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border: 2px solid #555555;
+    border-radius: 3px;
+    background-color: white;
+}
+#checkbox1:checked:after {
+    content: "";
+    display: block;
+    color:white;
+    background-color: black;
+    width: 5px;
+    height: 10px; 
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+      top: 2px;
+    left: 6px;  
+ } 
+ #phone123{
+     display: flex;
+     /* justify-content: space-between; */
+     margin-top: 7px;
+ }
+ #cancel{
+   color:#202340 ;
+   height: 40px;
+
+ }
+ #save{
+     background-color: #202340;
+     color: white;
+     margin-left: 100px;
+     padding: 7px;
+     width: 250px;
+ }
+
+
+
+    </style>
 </head>
 
 <body>
@@ -93,4 +222,34 @@
 </body>
 
 </html>
-<script type="module" src="../src/shipping address form.js"></script>
+<script type="module">
+    import { navbar2 } from "../components/navbar2.js";
+document.getElementById("navbar2").innerHTML=navbar2();
+
+document.getElementById("save").addEventListener('click',save);
+
+function save(){
+    // let first_name=document.getElementById("first_name").innerText;
+    
+    // let last_name=document.getElementById("last_name").value;
+    // console.log(first_name,last_name);
+    // let address=document.getElementById("address").value;
+    // let city=document.getElementById("city").value;
+    // let state=document.getElementById("state").value;
+    // let zip=document.getElementById("zip").value;
+
+    let details={
+        first_name:document.getElementById("first_name").value,
+        last_name:document.getElementById("last_name").value,
+        address:document.getElementById("address").value,
+        city:document.getElementById("city").value,
+        state:document.getElementById("state").value,
+        zip:document.getElementById("zip").value,
+
+    };
+    
+    localStorage.setItem('details',JSON.stringify(details));
+    console.log(details);
+    window.location.href="./address.html"
+}
+</script>

@@ -1,113 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account</title>
-    <link rel="stylesheet" href="../Styles/account.css">
-    <link rel="icon" type="image/x-icon" href="https://img.shop.com/Image/resources/homepage/shop-homepage-icon.svg">
+    <title>Create an Account</title>
+    <style>
+        /* Middle Section Css */
+#parent {
+    margin-left: 13%;
+    margin-right: 10%;
+}
+
+h1 {
+margin-bottom: -4px;
+color: #414467;
+}
+
+
+
+#child1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+
+#child1 input {
+    width: 400px;
+    height: 37px;
+}
+
+#child1 p {
+    margin-bottom: 5px
+}
+
+button {
+    display: block;
+    width: 410px;
+    background-color: #414467;
+    color: white;
+    height: 36px;
+    border-radius: 30px;
+    border: none;
+}
+
+button:hover {
+    background-color: #202340;
+}
+
+p {
+    color: #414467;
+}
+
+h1 {
+    color: #414467;
+}
+
+h3 {
+    color: #414467;
+}
+
+h5 {
+    color: #414467;
+}
+
+a {
+    color: #202340;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3366cc;
+}
+
+#phNumber {
+    width: 400px;
+    height: 37px;
+    /* padding-bottom: 3px;
+    padding-left: 3px; */
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+#referal input {
+    width: 900px;
+    height: 35px;
+}
+
+#referal {
+     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#captchaBox {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    /* height: 100px; */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#captchaBox div img {
+    width: 70px;
+}
+
+.check {
+    padding-top: 7%;
+}
+
+/* Middle Section End */
+
+/* Footer Section */
+
+.connect {
+    background-color: #545871;
+    color: white;
+}
+
+#connect1,
+#conn,
+#connect2,
+#ac,
+#images,
+#social,
+#connect2>div:nth-child(1) {
+    display: flex;
+
+}
+
+#connect1 {
+    height: 50px;
+    justify-content: right;
+    align-items: center;
+    padding: 0 20px;
+    font: 13px;
+}
+
+#conn {
+    gap: 40px;
+    align-items: center;
+}
+
+#connect2 {
+    justify-content: space-between;
+}
+
+#ac {
+    gap: 10px;
+    align-items: center;
+}
+
+#ac a,
+#a {
+    color: white;
+}
+
+#info {
+    font-size: 13px;
+    line-height: 12px;
+    padding: 7px 0 2px 10px;
+    color: #202340;
+    background-color: #f0f1f7;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.ancor>a {
+    color: black;
+}
+
+#images {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    justify-content: space-between;
+    background-color: #f0f1f7;
+}
+
+#images img {
+    height: 80px;
+    width: 80px;
+}
+
+#image {
+    margin: auto;
+    width: 10%;
+}
+
+#image>div>a>img {
+    height: 100px;
+    width: 120px;
+}
+
+#social {
+    align-items: center;
+}
+
+#social i {
+    width: 45px;
+    color: white;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+#connect2>div:nth-child(1) {
+    justify-content: space-between;
+}
+
+#footer {
+    background-color: #f0f1f7;
+    margin-top: 65px;
+}
+
+/* Footer Section End */
+
+/* MEDIA QUERIES */
+@media only  screen and (max-width: 480px) {
+  #child1 {
+  flex-direction: column;
+  text-align: center;
+  }
+}
+    </style>
 </head>
-
 <body>
-    <div id="create-account" class="my-account page-content margin-bottom-extra">
-        <header>
-            <h1 class="margin-left">Create an account</h1>
-        </header>
-        <form id="signup_form" class="shop-form create-account js-create-account-form" action="">
-            <div class="margin-both input_box">
-                <p class="note">* Indicates required field</p>
-                <div class="clear-both">
-                    <label class="input-left-half padding-bottom">First name*
-                        <br>
-                        <input name="first" type="text" placeholder="First name here" value="" class="resize"> </label>
+    <!-- Navbar(header Section) -->
 
-                    <label class="input-right-half padding-bottom">Last name*
-                        <br>
-                        <input name="last" type="text" placeholder="Last name here" value="" class="resize"> </label>
-
-
+    <!-- Middle Section -->
+    <div id="parent">
+        <h1>Create an account</h1>
+        <p> * Indicates required field</p>
+        <div id="child1">
+            <div class="descendent1">
+                <div>
+                    <p>First name*</p>
+                    <input id="firstName" type="text" placeholder="First name here">
                 </div>
-                <br>
-                <label for="form-email" class="input-left-half">Email address*
-                    <br>
-                    <input id="form-email" name="email" type="email" class="js-email-exists-check"
-                        placeholder="yourname@example.com" value="" required="" class="resize" data-val="email">
-                </label>
-                <br>
-                <div class="js-email-exists-error" style="display:none">
-                    <p>There is an issue with the email address provided. Please contact customer service. </p>
-                    <!-- <br> -->
+                <div>
+                    <p>Last name*</p>
+                    <input id="lastName" type="text" placeholder="Last name here">
                 </div>
-                <!-- <br> -->
-
-
-                <!-- <br> -->
-                <div class="clear-both">
-                    <label for="password" class="input-left-half">Password* (At least 7
-                        characters)
-                        <br>
-                        <input id="password" name="password" class="js-password-create-account" type="password"
-                            placeholder="Please enter a minimum of 7 characters" value="" required="" minlength="7">
-                    </label>
-                    <label for="passwordConfirm" class="input-right-half">Confirm password*
-                        <br>
-                        <input id="passwordConfirm" name="passwordConfirm" type="password"
-                            class="js-password-confirm-create-account" placeholder="Please reenter your password"
-                            value="" required="" minlength="7" data-equals="password"> </label>
+                <div>
+                    <p>Password* (At least 7 characters)</p>
+                    <input id="password" type="text" placeholder="Please enter a minimmum of 7 characters">
                 </div>
-                <div class="clear-both"></div>
+            </div>
+            <div class="descendent2">
+                <div>
+                    <p>Email address*</p>
+                    <input id="email" type="text" placeholder="yourname@example.com">
+                </div>
+                <div>
+                    <p>Confirm password*</p>
+                    <input id="confirmPassword" type="text" placeholder="Please reenter your password">
+                </div>
+            </div>
+        </div>
+        <h3>Text Message (SMS) Alerts: (Optional)</h3>
+        <p><input type="checkbox">Do you want to sign up for Shopper alerts from SHOP.COM? (Message and data rates may apply.)</p>
+        <p>Mobile Phone</p>
+        <input id="phNumber" type="number" placeholder="Please enter your 10 digit phone number (i.e. 999 999 9999)">
+        <div id="referal">
+            <p>Were you referred by a friend?</p>
+            <p>Enter their email address (Optional)</p>
+            <input id="Optional" type="text">
+        </div>
+        <p>Your Shop Consultant is SHOP.COM</p>
+        <h3>Email deals: (Optional)</h3>
+        <p><input type="checkbox">Do you want to sign up for sweet email offers and discounts from SHOP.COM?</p>
+        <p><input type="checkbox">Do you want to sign up for sweet email offers and discounts from MarketAmerica.com and its brands?</p>
+        <h5>Also, please confirm you are not a robot:</h5>
+        <!-- Captcha Box -->
+        <div id="captchaBox">
+            <div class="check">
+                <input type="checkbox">
+                <label for="">I'm not a robot</label>
+            </div>
+            <div>
+                <div><img src="https://tse1.mm.bing.net/th?id=OIP.9UiHysMW3h2Zv0-jA23lMQHaDi&pid=Api&rs=1&c=1&qlt=95&w=254&h=121"
+                    alt="recaptcha"></div>
+                <div>
+                    <a href="">Privacy-</a>
+                    <a href="">Terms</a>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+        <button id="btn1">Create your new Account</button>
+        <p>By creating an account, you are agreeing to our <a href="">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+    </div>
+    
 
-                <div id="mobile">
-                    <label for="mobile_num">
-                        Mobile number
-                        <br>
-                        <input type="text" id="mobile_num">
-                    </label>
+     <!-- fotter part -->
+    <!-- for all footer id={footer} -->
+    <div id="footer">
+
+
+        <div class="connect">
+
+            <div id="connect1">
+                <a id="a" href="https://www.shop.com/?credituser=R0001007">Link to this page and tell all of your
+                    friends!</a>
+            </div>
+
+
+            <div id="connect2">
+                <div id="ac">
+                    <a href="https://www.shop.com/info/about-us">About Us</a>
+                    <a href="https://www.shop.com/info/help">Help</a>
+                    <a href="https://www.shop.com/accessibility.xhtml"> | Accessibility Statement</a>
+                    <a href="https://www.shop.com/info/contact-us"> | Contact Us</a>
+                    <a href="https://www.shop.com/info/partner-with-us"> | Partner with Us</a>
+                    <a href="https://www.shop.com/info/services"> | Services</a>
+                    <a href="https://au.shop.com/?tkr=s16774"> | Country/Region ^</a>
+                    <a href="http://www.facebook.com/shop.com"> | Connect ^</a>
+                    <a href="https://www.shop.com/info/launch-my-site"> | Own your Own SHOP site</a>
                 </div>
 
-                <div class="refer-friend box box--rounded bg-lt-blue clear-both"> <label><span class="text">Were you
-                            referred by a friend?</span><br><span class="text">Enter their email address
-                            (Optional)</span>
-                        <br>
-                        <input id="referrer" autocomplete="off_hack" name="referrer" type="email" data-val="email"
-                            value=""> </label> </div> <input class="js-create-account-form-hash-code" type="hidden"
-                    name="bill-hash-code">
+                <div id="social">
+
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+
             </div>
-            <br class="clear-both">
-            <div class="padding-left padding-right">
-                <h2 class="text-med strong">Email deals: (Optional)</h2>
+        </div>
+
+        <div id="info">
+            <p> © 1997-2022 Market America, Inc. or its affiliates. All other designated trademarks, copyrights, and
+                brands are the property of their respective owners.</p>
+            <p>Only Customers will receive cashback on qualifying purchases. UnFranchise Owners/Shop Consultants will
+                receive increased IBV instead of cashback on qualifying purchases.</p>
+            <p class="ancor"><a href="https://www.shop.com/info/privacy-policy">Privacy Policy </a><a
+                    href="https://www.shop.com/info/terms-of-use">| Terms of Use </a><a
+                    href="https://www.shop.com/info/advertising-disclosure">| Advertising Disclosure </a><a
+                    href="https://www.shop.com/info/terms-of-use#return-policy">| Return Policy.</a><a
+                    href="https://www.shop.com/info/shipping-info">| Shipping Information</a></p>
+        </div>
+        <div id="images">
+
+            <img src="https://img.shop.com/Image/images/ir/Shop-ranks-19-in-newsweek-circle.png" alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/DC360_2021_rank_11_top_500_primary_merch_category.png"
+                alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_55_top_100.png" alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_80_top_500_and_1000.png" alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/Shop-ranks-15-in-NC-circle.png" alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/commonwealth_2021_rank_25_top_2000_tw.png" alt="">
+
+            <a href="https://www.bbb.org/local/0503/torch_award/past-torch-award-winners.html">
+                <img src="https://img.shop.com/Image/resources/images/torch-tafe2018-badge.png" alt="">
+            </a>
+
+
+            <a href="https://www.bbb.org/local/0503/torch_award/past-torch-award-winners.html">
+                <img src="https://seal-greensboro.bbb.org/seals/blue-seal-153-100-marketamericashopcom-4002355.png"
+                    alt="">
+            </a>
+
+        </div>
+
+        <div id="image">
+            <div>
+                <a
+                    href="https://seal.digicert.com/seals/popup/?tag=mcRGO2B9&url=www.shop.com&lang=en&cbr=1651559268095">
+                    <img src="https://aboutssl.org/wp-content/uploads/2019/10/digicert-site-seal.svg" alt="">
+                </a>
             </div>
-            <div class="email-sign-up clear margin-both margin-bottom-extra"> <label
-                    class="checkbox__container margin-top" for="optInIds"> <input id="optInIds" name="optInIds"
-                        type="checkbox" checked="checked"> <span class="checkbox__text">Do you want to sign up for sweet
-                        email offers and discounts from SHOP.COM?</span> </label>
-                <br>
-                <label class="checkbox__container margin-top" for="ma-email-register"> <input id="ma-email-register"
-                        name="optin-ma-brands" type="checkbox" checked="checked"> <span class="checkbox__text">Do you
-                        want to sign up for sweet email offers and discounts from MarketAmerica.com and its
-                        brands?</span> </label>
-            </div>
-
-
-
-
-            <div class="margin-both clear-both margin-bottom-extra">
-                <button id="submit-button" class="js-create-account-submit button primary full-width js-no-spinner"
-                    type="submit">Create your
-                    new account</button>
-
-                <p>By creating an account, you are agreeing to our <a class="js-no-spinner" target="_blank"
-                        href="/abouttermsofuse-t.xhtml">Terms of Service</a> and <a class="js-no-spinner"
-                        target="_blank" href="/AboutPrivacyPolicy-t.xhtml">Privacy Policy</a>.</p>
-            </div>
-        </form>
+        </div>
     </div>
 
-
-    
-    <script src="../src/account.js" type="module"></script>
+    <!-- Footer Section End -->
 </body>
-
 </html>
+<script>
+    document.getElementById("btn1").addEventListener("click", function(){
+        alert("SignUp Successful")
+        window.location.href="login.html"
+    })
+</script>

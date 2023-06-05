@@ -1,70 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../Styles/login.css">
-    <link rel="icon" type="image/x-icon" href="https://img.shop.com/Image/resources/homepage/shop-homepage-icon.svg">
+    <title>SHOP.COM | Account Login</title>
+    <style>
+        #parent {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#parent input {
+    width: 400px;
+    height: 37px;
+}
+
+#child1 p {
+    color: #414467;
+    margin-bottom: 5px;
+}
+
+
+#child1 a {
+    display: block;
+    margin-bottom: 25px;
+    color:  #202340;
+    margin-top: 5px;
+}
+
+#child1 button {
+    display: block;
+    width: 410px;
+    background-color: #414467;
+    color: white;
+    height: 36px;
+    border-radius: 30px;
+    border: none;
+}
+
+#child1 button:hover {
+    background-color: #202340;
+}
+
+#child2 button:hover {
+    background-color: #202340;
+    color: white;
+}
+
+#child2 button {
+    display: block;
+    margin-top: 8px;
+    width: 200px;
+    height: 36px;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid #202340;
+    color: #202340;
+    font-weight: 760;
+}
+
+#child2 p {
+    font-size: 23px;
+    font-weight: 500;
+    padding-top: 48px;
+    margin-bottom: 12px;
+    color: #414467;
+}
+
+span {
+    color: #414467;
+}
+
+#child2 a {
+    color: #202340;
+}
+
+h1 {
+    margin-bottom: -5px;
+    color: #414467;
+} 
+
+#parent a:hover {
+    text-decoration: none;
+    color: #3366cc;
+}
+
+
+/* Footer Section */
+
+.connect {
+    background-color: #545871;
+    color: white;
+}
+
+#connect1,
+#conn,
+#connect2,
+#ac,
+#images,
+#social,
+#connect2>div:nth-child(1) {
+    display: flex;
+
+}
+
+#connect1 {
+    height: 50px;
+    justify-content: right;
+    align-items: center;
+    padding: 0 20px;
+    font: 13px;
+}
+
+#conn {
+    gap: 40px;
+    align-items: center;
+}
+
+#connect2 {
+    justify-content: space-between;
+}
+
+#ac {
+    gap: 10px;
+    align-items: center;
+}
+
+#ac a,
+#a {
+    color: white;
+}
+
+#info {
+    font-size: 13px;
+    line-height: 12px;
+    padding: 7px 0 2px 10px;
+    color: #202340;
+    background-color: #f0f1f7;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.ancor>a {
+    color: black;
+}
+
+#images {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    justify-content: space-between;
+    background-color: #f0f1f7;
+}
+
+#images img {
+    height: 80px;
+    width: 80px;
+}
+
+#image {
+    margin: auto;
+    width: 10%;
+}
+
+#image>div>a>img {
+    height: 100px;
+    width: 120px;
+}
+
+#social {
+    align-items: center;
+}
+
+#social i {
+    width: 45px;
+    color: white;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+#connect2>div:nth-child(1) {
+    justify-content: space-between;
+}
+
+#footer {
+    background-color: #f0f1f7;
+    margin-top: 65px;
+}
+
+/* Footer Section End */
+
+/* MEDIA QUERIES */
+@media only  screen and (max-width: 450px) {
+    #parent {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+  
+    </style>
 </head>
-
 <body>
-    <div class="wrapper wrapper--small page-content">
-        <section class="my-account sign-in margin-both margin-top-extra" id="">
+    <!-- navbar section(header) -->
+
+    <!-- middle body -->
+    <div id="parent">
+        <div id="child1">
             <h1>Sign in</h1>
+            <p>Email address:</p>
+            <input id="email" type="text" placeholder="yourname@example.com">
+            <p>Password:</p>
+            <input id="password" type="text" placeholder="Plese enter your password">
+            <a href="">Forgot your password? </a> 
+            <button id="btn3">Sign in</button>
+        </div>
+        <div id="child2">
+            <p>Don't have an account?</p>
+            <span>
+                With a SHOP.COM account, you can enjoy the following benefits: up to <br>
+                50% Cashback on eligible purchases, redeem discount coupons, order <br>
+                status and history, saved payment options and addresses, exclusive <br>
+                emails and more.<a href="">Learn more</a>
+            </span>
+            <button type="button" id="btn2">Create your new account</button>
+        </div>
+    </div>
+    <!-- middle Section End -->
 
-            <div class="flexing_items">
-            <div class="input-left-half">
-                <form id="shop_login_form" class="js-captcha-form shop-form" name="shop-form" method=""
-                    action="" > 
-
-                    <div id="signIn">
-                        <label> Email address: 
-                            <br>
-                            <input name="username" placeholder="yourname@example.com" required="" value="" type="email" data-val="email" id="email"> 
-                            </label> 
-                            <label> Password:
-                            <br> 
-                            <input id="password" name="password" type="password" placeholder="Please enter your password" required="" minlength="1"> 
-                            </label>
-                    </div>
-
-                        
+     <!-- fotter part -->
+    <!-- for all footer id={footer} -->
+    <div id="footer">
 
 
-                    <p><a href="" rel="">Forgot your password?</a></p> 
-                    <button id="submit-button" class="button primary button--uppercase " type="submit">Sign In
+        <div class="connect">
 
-                    </button>
-                    <!-- <input type="hidden" name="_spring_security_remember_me" id="_spring_security_remember_me"
-                        value="true"> -->
-
-                        
-                </form>
-                <!-- <hr> -->
+            <div id="connect1">
+                <a id="a" href="https://www.shop.com/?credituser=R0001007">Link to this page and tell all of your
+                    friends!</a>
             </div>
-            <div class="input-right-half">
-                <h2>Don't have an account?</h2>
-                <p>With a SHOP.COM account, you can enjoy the following benefits: up to <span class="reward">50% <img
-                            class="reward__cashback-icon reward__cashback-icon--med"
-                            src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt="">Cashback</span>
-                    on eligible purchases, redeem discount coupons, order status and history, saved payment options and
-                    addresses, exclusive emails and more. <a href="/earn-cashback-k.xhtml">Learn more</a></p> <a
-                    id="create-account" class="button button--secondary button--uppercase"
-                    href="createAccount.html" role="button">Create your new account</a>
+
+
+            <div id="connect2">
+                <div id="ac">
+                    <a href="https://www.shop.com/info/about-us">About Us</a>
+                    <a href="https://www.shop.com/info/help">Help</a>
+                    <a href="https://www.shop.com/accessibility.xhtml"> | Accessibility Statement</a>
+                    <a href="https://www.shop.com/info/contact-us"> | Contact Us</a>
+                    <a href="https://www.shop.com/info/partner-with-us"> | Partner with Us</a>
+                    <a href="https://www.shop.com/info/services"> | Services</a>
+                    <a href="https://au.shop.com/?tkr=s16774"> | Country/Region ^</a>
+                    <a href="http://www.facebook.com/shop.com"> | Connect ^</a>
+                    <a href="https://www.shop.com/info/launch-my-site"> | Own your Own SHOP site</a>
+                </div>
+
+                <div id="social">
+
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+
             </div>
         </div>
-        </section>
+
+        <div id="info">
+            <p> © 1997-2022 Market America, Inc. or its affiliates. All other designated trademarks, copyrights, and
+                brands are the property of their respective owners.</p>
+            <p>Only Customers will receive cashback on qualifying purchases. UnFranchise Owners/Shop Consultants will
+                receive increased IBV instead of cashback on qualifying purchases.</p>
+            <p class="ancor"><a href="https://www.shop.com/info/privacy-policy">Privacy Policy </a><a
+                    href="https://www.shop.com/info/terms-of-use">| Terms of Use </a><a
+                    href="https://www.shop.com/info/advertising-disclosure">| Advertising Disclosure </a><a
+                    href="https://www.shop.com/info/terms-of-use#return-policy">| Return Policy.</a><a
+                    href="https://www.shop.com/info/shipping-info">| Shipping Information</a></p>
+        </div>
+        <div id="images">
+
+            <img src="https://img.shop.com/Image/images/ir/Shop-ranks-19-in-newsweek-circle.png" alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/DC360_2021_rank_11_top_500_primary_merch_category.png"
+                alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_55_top_100.png" alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/DC360_2022_rank_80_top_500_and_1000.png" alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/Shop-ranks-15-in-NC-circle.png" alt="">
+
+            <img src="https://img.shop.com/Image/images/ir/commonwealth_2021_rank_25_top_2000_tw.png" alt="">
+
+            <a href="https://www.bbb.org/local/0503/torch_award/past-torch-award-winners.html">
+                <img src="https://img.shop.com/Image/resources/images/torch-tafe2018-badge.png" alt="">
+            </a>
+
+
+            <a href="https://www.bbb.org/local/0503/torch_award/past-torch-award-winners.html">
+                <img src="https://seal-greensboro.bbb.org/seals/blue-seal-153-100-marketamericashopcom-4002355.png"
+                    alt="">
+            </a>
+
+        </div>
+
+        <div id="image">
+            <div>
+                <a
+                    href="https://seal.digicert.com/seals/popup/?tag=mcRGO2B9&url=www.shop.com&lang=en&cbr=1651559268095">
+                    <img src="https://aboutssl.org/wp-content/uploads/2019/10/digicert-site-seal.svg" alt="">
+                </a>
+            </div>
+        </div>
     </div>
 
-    
-    
-<script src="../src/login.js" type="module"></script> 
+    <!-- Footer Section End -->
 </body>
-
-
-
-
 </html>
+<script>
+    document.getElementById("btn2").addEventListener("click", function(){
+        window.location.href="createAccount.html"
+    })
+    document.getElementById("btn3").addEventListener("click", function(){
+        alert("Welcome to Shop.Com");
+        window.location.href="./index.html"
+    })
+</script>
